@@ -27,10 +27,10 @@ function Header() {
             style={{ fontFamily: "'Satoshi'", fontWeight: "bold" }}
             fontSize={["3xl", "3xl", "4xl"]}
           >
-            ExpenseTracker
+            ExpenseTrack
           </Heading>
           <Hide below="sm">
-            <HStack spacing={[2, 3, 5]} key={route.label}>
+            <HStack spacing={[2, 3, 5]} key={route.label} alignSelf="center">
               {route.map((route) => (
                 <ChakraLink
                   as={ReactRouterLink}
@@ -55,15 +55,18 @@ function Header() {
           direction="row"
           gap={2}
           alignSelf="center"
+          justifySelf="center"
           alignItems="baseline"
         >
-          <BellIcon w={8} h={6} color="gray.500" m="auto" />
+          <BellIcon w={8} h={6} color="gray.500" m="auto" cursor="pointer" />
           <Image
             src="https://bit.ly/dan-abramov"
             alt="profile-image"
             boxSize="35px"
             objectFit="contain"
             rounded="full"
+            cursor="pointer"
+            loading="lazy"
           />
         </Box>
       </Flex>
