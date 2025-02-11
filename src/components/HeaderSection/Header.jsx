@@ -19,9 +19,15 @@ function Header() {
   console.log(isActive);
 
   return (
-    <Box as="section" px={[5, 5, 5]} py={2}>
-      <Flex as="header" direction="row" justify="space-between" w="full">
-        <Box display="flex" direction="row" alignItems="baseline" gap={2}>
+    <Box as="section" px={[5, 5, 5]} py="2">
+      <Flex
+        as="header"
+        w="full"
+        direction="row"
+        justify="space-between"
+        alignSelf="center"
+      >
+        <Box display="flex" direction="row" gap={2}>
           <Heading
             as="h1"
             style={{ fontFamily: "'Satoshi'", fontWeight: "bold" }}
@@ -29,7 +35,7 @@ function Header() {
           >
             ExpenseTrack
           </Heading>
-          <Hide below="sm">
+          <Hide below="md">
             <HStack spacing={[2, 3, 5]} key={route.label} alignSelf="center">
               {route.map((route) => (
                 <ChakraLink

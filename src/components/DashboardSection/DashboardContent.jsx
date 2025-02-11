@@ -1,6 +1,7 @@
-import { Box, Progress, Stack, Text } from "@chakra-ui/react";
-import { bills } from "./dashboardData";
+import { Box, Icon, Progress, Stack, Text } from "@chakra-ui/react";
 import { ArrowUpIcon } from "@chakra-ui/icons";
+import { bills } from "./dashboardData";
+import { FaChartLine, FaFileInvoiceDollar, FaWallet } from "react-icons/fa6";
 
 function DashboardContent({ children }) {
   return (
@@ -16,15 +17,31 @@ function DashboardContent({ children }) {
             mt={{ md: "4", lg: "4" }}
             shadow="md"
           >
-            <Text
-              color="slategray"
-              fontSize="sm"
-              fontWeight="normal"
-              fontFamily="sans-serif"
-              py="4"
+            <Box
+              display="flex"
+              flexDirection="row"
+              justifyContent="space-between"
+              alignItems="center"
+              mb="3"
             >
-              {bill.title}
-            </Text>
+              <Text
+                color="slategray"
+                fontSize="sm"
+                fontWeight="normal"
+                fontFamily="sans-serif"
+              >
+                {bill.title}
+              </Text>
+              {bill.title === "Total Expenses" && (
+                <Icon as={FaChartLine} color="blue" />
+              )}
+              {bill.title === "Monthly Budget" && (
+                <Icon as={FaWallet} color="purple" />
+              )}
+              {bill.title === "Outstanding Bills" && (
+                <Icon as={FaFileInvoiceDollar} color="red" />
+              )}
+            </Box>
 
             <Text as="h1" fontSize={["xl", "xl", "3xl"]} fontWeight="bold">
               {bill.amount}

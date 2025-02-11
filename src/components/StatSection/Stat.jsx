@@ -14,15 +14,15 @@ function Stat() {
     >
       {statData.map((stat) => (
         <Box
-          display="flex"
-          flexDirection="column"
           key={stat.title}
-          bg="white"
+          display="flex"
           w="full"
-          rounded="lg"
           p="3"
-          shadow="md"
+          bg="white"
           gap="4"
+          flexDirection="column"
+          rounded="lg"
+          shadow="md"
         >
           <Box
             display="flex"

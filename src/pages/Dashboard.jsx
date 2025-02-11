@@ -5,7 +5,14 @@ import QuickActions from "../components/QuickActionSection/QuickActions";
 
 function Dashboard() {
   return (
-    <Box as="section" h="100dvh" bg="#F9FAFB" w="full" px={[2, 4, 10]}>
+    <Box
+      as="section"
+      h="100dvh"
+      bg="#F9FAFB"
+      w="full"
+      px={[2, 4, 10]}
+      pt={{ base: "4" }}
+    >
       <DashboardContent>
         <Stat />
         <QuickActions />
