@@ -6,13 +6,13 @@ import {
   Text,
   Heading,
   Hide,
-  Image,
 } from "@chakra-ui/react";
 import { Link as ReactRouterLink, useLocation } from "react-router";
 import { route } from "./route";
-import { BellIcon } from "@chakra-ui/icons";
+import { BellIcon, HamburgerIcon } from "@chakra-ui/icons";
+import ProfileImage from "../ProfileImage";
 
-function Header() {
+function Header({ onClick }) {
   const location = useLocation();
   const isActive = location.pathname;
 
@@ -28,6 +28,14 @@ function Header() {
         alignSelf="center"
       >
         <Box display="flex" direction="row" gap={2}>
+          <HamburgerIcon
+            w={8}
+            h={6}
+            m="auto"
+            display={{ base: "block", md: "none", lg: "none" }}
+            cursor="pointer"
+            onClick={onClick}
+          />
           <Heading
             as="h1"
             style={{ fontFamily: "'Satoshi'", fontWeight: "bold" }}
@@ -65,15 +73,7 @@ function Header() {
           alignItems="baseline"
         >
           <BellIcon w={8} h={6} color="gray.500" m="auto" cursor="pointer" />
-          <Image
-            src="https://bit.ly/dan-abramov"
-            alt="profile-image"
-            boxSize="35px"
-            objectFit="contain"
-            rounded="full"
-            cursor="pointer"
-            loading="lazy"
-          />
+          <ProfileImage boxSize="35" />
         </Box>
       </Flex>
     </Box>
