@@ -1,14 +1,5 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Link as ChakraLink,
-  Text,
-  Heading,
-  Hide,
-} from "@chakra-ui/react";
+import { Box, Flex, Link as ChakraLink, Heading, Hide } from "@chakra-ui/react";
 import { Link as ReactRouterLink, useLocation } from "react-router";
-import { route } from "./route";
 import { BellIcon, HamburgerIcon } from "@chakra-ui/icons";
 import ProfileImage from "../ProfileImage";
 
@@ -27,7 +18,7 @@ function Header({ onClick }) {
         justify="space-between"
         alignSelf="center"
       >
-        <Box display="flex" direction="row" gap={2}>
+        <Box display="flex" direction="row" gap={4}>
           <HamburgerIcon
             w={8}
             h={6}
@@ -47,28 +38,19 @@ function Header({ onClick }) {
             ExpenseTrack
           </Heading>
           <Hide below="md">
-            <HStack
-              bg="white"
-              spacing={[2, 3, 5]}
-              key={route.label}
-              alignSelf="center"
+            <ChakraLink
+              as={ReactRouterLink}
+              mt="4"
+              to="/dashboard"
+              fontSize={["sm", "md", "md"]}
+              fontFamily="sans-serif"
+              color={isActive && "blue.500"}
+              _hover={{
+                color: "blue.500",
+              }}
             >
-              {route.map((route) => (
-                <ChakraLink
-                  as={ReactRouterLink}
-                  to={route.path}
-                  key={route.label}
-                  fontSize={["sm", "md", "md"]}
-                  fontFamily="sans-serif"
-                  color={isActive === route.path ? "blue.500" : "gray.800"}
-                  _hover={{
-                    color: "blue.500",
-                  }}
-                >
-                  {route.label}
-                </ChakraLink>
-              ))}
-            </HStack>
+              Dashboard
+            </ChakraLink>
           </Hide>
         </Box>
 

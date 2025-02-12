@@ -1,8 +1,7 @@
-import { Navigate, Route, Routes } from "react-router";
-import Dashboard from "./pages/Dashboard";
-import PageLayout from "./pages/PageLayout";
 import { lazy, Suspense } from "react";
+import { Navigate, Route, Routes } from "react-router";
 import { Text } from "@chakra-ui/react";
+import PageLayout from "./pages/PageLayout";
 
 function App() {
   const Dashboard = lazy(() => import("./pages/Dashboard"));
