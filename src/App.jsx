@@ -6,6 +6,7 @@ import { Text } from "@chakra-ui/react";
 
 function App() {
   const Dashboard = lazy(() => import("./pages/Dashboard"));
+
   return (
     <Suspense fallback={<Text>loading...</Text>}>
       <Routes>
