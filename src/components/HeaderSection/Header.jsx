@@ -39,7 +39,7 @@ function Header({ onClick }) {
           <Heading
             as="h1"
             style={{
-              fontFamily: "'Satoshi', Avenir, sans-serif",
+              fontFamily: "Satoshi, Avenir, sans-serif",
               fontWeight: "bold",
             }}
             fontSize={["3xl", "3xl", "4xl"]}
@@ -47,7 +47,12 @@ function Header({ onClick }) {
             ExpenseTrack
           </Heading>
           <Hide below="md">
-            <HStack spacing={[2, 3, 5]} key={route.label} alignSelf="center">
+            <HStack
+              bg="white"
+              spacing={[2, 3, 5]}
+              key={route.label}
+              alignSelf="center"
+            >
               {route.map((route) => (
                 <ChakraLink
                   as={ReactRouterLink}
