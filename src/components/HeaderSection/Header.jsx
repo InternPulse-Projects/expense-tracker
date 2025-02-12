@@ -28,7 +28,6 @@ function Header({ onClick }) {
             onClick={onClick}
           />
           <Heading
-            as="h1"
             style={{
               fontFamily: "Satoshi, Avenir, sans-serif",
               fontSize: "2rem",
