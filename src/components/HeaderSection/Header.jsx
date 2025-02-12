@@ -18,7 +18,7 @@ function Header({ onClick }) {
         justify="space-between"
         alignSelf="center"
       >
-        <Box display="flex" direction="row" gap={4}>
+        <Box w={{ lg: "80" }} display="flex" direction="row" gap={2}>
           <HamburgerIcon
             w={8}
             h={6}
@@ -31,26 +31,36 @@ function Header({ onClick }) {
             as="h1"
             style={{
               fontFamily: "Satoshi, Avenir, sans-serif",
+              fontSize: "2rem",
               fontWeight: "bold",
             }}
-            fontSize={["3xl", "3xl", "4xl"]}
           >
             ExpenseTrack
           </Heading>
           <Hide below="md">
-            <ChakraLink
-              as={ReactRouterLink}
-              mt="4"
-              to="/dashboard"
-              fontSize={["sm", "md", "md"]}
-              fontFamily="sans-serif"
-              color={isActive && "blue.500"}
-              _hover={{
-                color: "blue.500",
-              }}
-            >
-              Dashboard
-            </ChakraLink>
+            <Box m="auto">
+              <ChakraLink
+                as={ReactRouterLink}
+                mt="8"
+                to="/dashboard"
+                fontSize={["sm", "md", "md"]}
+                fontFamily="sans-serif"
+                color={isActive && "blue.500"}
+                _hover={{
+                  color: "blue.500",
+                }}
+              >
+                Dashboard
+              </ChakraLink>
+              {isActive && (
+                <Box
+                  w="8"
+                  m="auto"
+                  borderBottom="2px"
+                  borderBottomColor="blue.500"
+                ></Box>
+              )}
+            </Box>
           </Hide>
         </Box>
 
