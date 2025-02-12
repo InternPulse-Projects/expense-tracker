@@ -50,7 +50,7 @@ function Stat() {
           <Stack
             direction="column"
             fontSize="sm"
-            color="slategray"
+            color="gray.600"
             fontWeight="normal"
             fontFamily="sans-serif"
             mb="4"

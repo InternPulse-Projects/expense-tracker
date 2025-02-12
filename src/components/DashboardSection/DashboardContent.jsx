@@ -25,7 +25,7 @@ function DashboardContent({ children }) {
               mb="3"
             >
               <Text
-                color="slategray"
+                color="gray.600"
                 fontSize="sm"
                 fontWeight="normal"
                 fontFamily="sans-serif"
