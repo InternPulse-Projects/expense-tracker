@@ -38,7 +38,7 @@ function Header({ onClick }) {
           />
           <Heading
             as="h1"
-            style={{ fontFamily: "'Satoshi'", fontWeight: "bold" }}
+            style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: "bold" }}
             fontSize={["3xl", "3xl", "4xl"]}
           >
             ExpenseTrack
