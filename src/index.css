@@ -10,10 +10,12 @@ body {
   font-family: "Satoshi";
   src: url("./assets/fonts/Satoshi-Regular.ttf") format("tff");
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Satoshi";
   src: url("./assets/fonts/Satoshi-Bold.ttf") format("tff");
   font-weight: 700;
+  font-display: swap;
 }

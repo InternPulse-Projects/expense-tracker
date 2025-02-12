@@ -7,8 +7,6 @@ function Header({ onClick }) {
   const location = useLocation();
   const isActive = location.pathname;
 
-  console.log(isActive);
-
   return (
     <Box as="section" px={[5, 5, 5]} py="2">
       <Flex
@@ -29,7 +27,7 @@ function Header({ onClick }) {
           />
           <Heading
             style={{
-              fontFamily: "Satoshi, Avenir, sans-serif",
+              fontFamily: "Satoshi, sans-serif",
               fontSize: "2rem",
               fontWeight: "700",
             }}
