@@ -31,7 +31,7 @@ function Header({ onClick }) {
             style={{
               fontFamily: "Satoshi, Avenir, sans-serif",
               fontSize: "2rem",
-              fontWeight: "bold",
+              fontWeight: "700",
             }}
           >
             ExpenseTrack
