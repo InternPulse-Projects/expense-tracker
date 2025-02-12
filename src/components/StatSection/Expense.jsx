@@ -12,7 +12,8 @@ function Expense({ title, data }) {
             </Box>
             <Progress
               value={prog}
-              max={24500}
+              max={30000}
+              aria-label="Loading progress"
               colorScheme={color}
               rounded="full"
             />

@@ -52,7 +52,7 @@ function Header({ onClick }) {
                   key={route.label}
                   fontSize={["sm", "md", "md"]}
                   fontFamily="sans-serif"
-                  color={isActive === route.path ? "blue.500" : "slategray"}
+                  color={isActive === route.path ? "blue.500" : "gray.800"}
                   _hover={{
                     color: "blue.500",
                   }}

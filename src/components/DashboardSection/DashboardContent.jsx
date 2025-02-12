@@ -60,6 +60,7 @@ function DashboardContent({ children }) {
               <Progress
                 value={80}
                 max={100}
+                aria-label="Loading progress"
                 colorScheme="purple"
                 rounded="full"
                 mb="4"
