@@ -30,7 +30,7 @@ function Stat() {
             justifyContent="space-between"
           >
             <Text
-              style={{ fontFamily: "'Satoshi'", fontWeight: "bold" }}
+              style={{ fontFamily: "Satoshi, sans-serif", fontWeight: "bold" }}
               fontSize="lg"
             >
               {stat.title}

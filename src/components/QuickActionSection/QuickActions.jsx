@@ -8,7 +8,7 @@ function QuickActions() {
     <Box bg="white" w="full" rounded="lg" p={3} shadow="md" mb="4">
       <Heading
         as="h1"
-        style={{ fontFamily: "'Satoshi'", fontWeight: "bold" }}
+        style={{ fontFamily: "Satoshi, sans-serif", fontWeight: "bold" }}
         fontSize="lg"
       >
         Quick Actions
