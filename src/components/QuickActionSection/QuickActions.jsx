@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Icon, Text } from "@chakra-ui/react";
 import { quickActions } from "../DashboardSection/dashboardData";
 import { AddIcon, SettingsIcon } from "@chakra-ui/icons";
 import { FaFileInvoice, FaRegChartBar } from "react-icons/fa6";
@@ -14,12 +14,13 @@ function QuickActions() {
         Quick Actions
       </Heading>
 
-      <Flex
+      <Box
         as="section"
+        display={{ base: "grid", md: "grid", lg: "flex" }}
+        gridTemplateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+        flexDirection={{ lg: "row" }}
         py="4"
         w="full"
-        direction={{ base: "column", lg: "row" }}
-        justify="space-between"
         gap="4"
       >
         {quickActions.map(({ title, color, background }) => (
@@ -35,13 +36,14 @@ function QuickActions() {
             cursor="pointer"
           >
             <Box
-              w="full"
+              w="32"
+              m="auto"
               display="flex"
               flexDirection="row"
               alignSelf="center"
-              gap="1"
-              justifyContent="center"
+              justifySelf="center"
               alignItems="center"
+              gap="1"
             >
               {title === "Add expense" && <AddIcon color="blue" w={3} h={3} />}
               {title === "Create Invoice" && (
@@ -53,13 +55,18 @@ function QuickActions() {
               {title === "Settings" && (
                 <SettingsIcon color="orange" w={3} h={3} />
               )}
-              <Text fontWeight="normal" fontFamily="sans-serif" fontSize="sm">
+              <Text
+                w="full"
+                fontWeight="normal"
+                fontFamily="sans-serif"
+                fontSize="sm"
+              >
                 {title}
               </Text>
             </Box>
           </Box>
         ))}
-      </Flex>
+      </Box>
     </Box>
   );
 }
