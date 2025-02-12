@@ -1,4 +1,4 @@
-import { Box, Stack, useDisclosure } from "@chakra-ui/react";
+import { Stack, useDisclosure } from "@chakra-ui/react";
 import { Outlet } from "react-router";
 import Header from "../components/HeaderSection/Header";
 import MobileNav from "../components/MobileNav";
